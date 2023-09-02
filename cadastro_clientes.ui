@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>236</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>700</width>
+    <height>236</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>700</width>
+    <height>236</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Cadastro de Clientes</string>
+  </property>
+  <widget class="QLineEdit" name="ln_cpf">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>92</y>
+     <width>161</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="inputMask">
+    <string>000.000.000-00</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lb_cpf">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>70</y>
+     <width>29</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(94, 92, 100);</string>
+   </property>
+   <property name="text">
+    <string>CPF</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lb_cnpj">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>70</y>
+     <width>142</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(94, 92, 100);</string>
+   </property>
+   <property name="text">
+    <string>CNPJ</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="ln_cnpj">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>92</y>
+     <width>161</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="inputMask">
+    <string> 00.000.000/0000-00</string>
+   </property>
+   <property name="text">
+    <string> ../-</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tb_cadastros">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>170</y>
+     <width>661</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="autoScroll">
+    <bool>true</bool>
+   </property>
+   <property name="showGrid">
+    <bool>true</bool>
+   </property>
+   <property name="gridStyle">
+    <enum>Qt::SolidLine</enum>
+   </property>
+   <property name="sortingEnabled">
+    <bool>false</bool>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+   <attribute name="horizontalHeaderVisible">
+    <bool>true</bool>
+   </attribute>
+   <attribute name="verticalHeaderVisible">
+    <bool>false</bool>
+   </attribute>
+   <column>
+    <property name="text">
+     <string>Id</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Nome</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>CPF</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>CNPJ</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QPushButton" name="bt_salvar">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>87</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+	background-color: rgb(46, 194, 126);
+	color: rgb(255, 255, 255);
+	border-radius: 10px;
+}
+QPushButton:hover {
+  /* Cor de fundo quando o mouse passa por cima (hover) */  
+	background-color: rgb(87, 227, 137);
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string>Salvar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="bt_editar">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>87</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	
+	background-color: rgb(28, 113, 216);
+	color: rgb(255, 255, 255);
+	border-radius: 10px;
+}
+QPushButton:hover {	
+	background-color: rgb(98, 160, 234);
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string>Editar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="bt_excluir">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>87</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+	background-color: rgb(192, 28, 40);
+	color: rgb(255, 255, 255);
+	border-radius: 10px;
+}
+QPushButton:hover {
+	background-color: rgb(246, 97, 81);
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Excluir</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame_3">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>230</y>
+     <width>705</width>
+     <height>9</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(97, 53, 131);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="rdb_juridica">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>36</y>
+     <width>136</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(129, 61, 156);</string>
+   </property>
+   <property name="text">
+    <string>Pessoa Jurídica</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="rdb_fisica">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>136</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(28, 113, 216);</string>
+   </property>
+   <property name="text">
+    <string>Pesso Física</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="ln_nome">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>92</y>
+     <width>251</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lb_nome">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>70</y>
+     <width>44</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(94, 92, 100);</string>
+   </property>
+   <property name="text">
+    <string>Nome</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cb_nome">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>132</y>
+     <width>251</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(94, 92, 100);
+color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <zorder>rdb_juridica</zorder>
+  <zorder>rdb_fisica</zorder>
+  <zorder>ln_nome</zorder>
+  <zorder>lb_nome</zorder>
+  <zorder>cb_nome</zorder>
+  <zorder>lb_cnpj</zorder>
+  <zorder>ln_cnpj</zorder>
+  <zorder>ln_cpf</zorder>
+  <zorder>lb_cpf</zorder>
+  <zorder>tb_cadastros</zorder>
+  <zorder>bt_salvar</zorder>
+  <zorder>bt_editar</zorder>
+  <zorder>bt_excluir</zorder>
+  <zorder>frame_3</zorder>
+ </widget>
+ <tabstops>
+  <tabstop>ln_nome</tabstop>
+  <tabstop>ln_cpf</tabstop>
+  <tabstop>ln_cnpj</tabstop>
+  <tabstop>bt_salvar</tabstop>
+  <tabstop>cb_nome</tabstop>
+  <tabstop>tb_cadastros</tabstop>
+  <tabstop>rdb_fisica</tabstop>
+  <tabstop>rdb_juridica</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
