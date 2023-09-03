@@ -2,8 +2,7 @@
 
 Este é um projeto de cadastro de clientes desenvolvido em Python com a biblioteca PyQt5 para interface gráfica. Ele fornece uma forma prática de gerenciar informações sobre clientes, seja pessoa física ou jurídica.
 
-![image](https://github.com/GiulianoVianna/SIG/assets/101942554/29296724-0b87-4eb3-9928-6338bb0d4975)
-
+![image](https://github.com/GiulianoVianna/CadCli/assets/101942554/baab3b80-640b-4a98-b441-ba73f47e4fa7)
 
 ## Funcionalidades
 
